@@ -6,47 +6,7 @@
     <title>Weather Forecast</title>
 <script defer src="main.bundle.js"></script></head>
 <body>
-    <!-- <form action="" novalidate>
-        <div class="form-field">
-            <label for="location">Enter a Location:</label>
-            <input type="search" name="location" id="location" class="searchbar" required>
-            <div class="error-message"></div>
-        </div>
-        <div class="form-field">
-            <fieldset>
-                <legend>Select Units to Display:</legend>
-                <div>
-                    <label for="metric">Metric:</label>
-                    <input type="radio" name="units" id="metric" value="Metric">
-                </div>
-                <div>
-                    <label for="imperial">Imperial:</label>
-                    <input type="radio" name="units" id="imperial" value="Imperial">
-                </div>
-            </fieldset>
-            <div class="error-message"></div>
-        </div>
-
-        <button>Get Weather</button>
-    </form> -->
-
     <div class="weather-body">
-        <!-- Current Weather -->
-        <span class="current-weather-container">
-            <div>
-                <h1 class="current-temp">6&deg;</h1>
-                <div class="location-inline-block">
-                    <h2 class="current-weather-description">Sunny</h2>
-                    <span class="icon current-weather-icon"></span>
-                </div>
-                <div class="location-inline-block">
-                    <h4 class="current-low-high">4&deg;/20&deg;</h4>
-                    <h4 class="rain-chance">Rain: 40%</h4>
-                    <h4 class="snow-chance">Snow: 0%</h4>
-                </div>
-            </div>
-        </span>
-
         <!-- Location -->
         <span class="location-info-container">
             <h1 class="city">PARIS</h1>
@@ -64,8 +24,68 @@
             </div>
         </span>
 
+        <!-- Current Weather -->
+        <span class="current-weather-container">
+            <div>
+                <h1 class="current-temp">6&deg;</h1>
+                <div class="location-inline-block">
+                    <h2 class="current-weather-description">Sunny</h2>
+                    <span class="icon current-weather-icon"></span>
+                </div>
+                <h4 class="current-low-high">4&deg;/20&deg;</h4>
+                <div class="location-inline-block">
+                    <h4 class="rain-chance">Rain: 40%</h4>
+                    <h4 class="snow-chance">Snow: 0%</h4>
+                </div>
+            </div>
+        </span>
+        
+        <span class="gif-container"></span>
+
+        <div class="three-day-forecast-container">
+            <h2>3 Day Forecast:</h2>
+            <div class="three-day-forecast-card-grid">
+                <!-- Today -->
+                <span class="three-day-forecast-card forecast-today">
+                    <h4 class="three-day-forecast-card-title">Today</h4>
+                    <span class="three-day-forecast-card-inline">
+                        <span class="icon forecast-today-icon"></span>
+                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
+                        <span class="forecast-today-chances">
+                            <h4>Rain: 40%</h4>
+                            <h4>Snow: 0%</h4>
+                        </span>
+                    </span>
+                </span>
+                <!-- Tomorrow -->
+                <span class="three-day-forecast-card forecast-today">
+                    <h4 class="three-day-forecast-card-title">Tomorrow</h4>
+                    <span class="three-day-forecast-card-inline">
+                        <span class="icon forecast-tomorrow-icon"></span>
+                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
+                        <span class="forecast-today-chances">
+                            <h4>Rain: 40%</h4>
+                            <h4>Snow: 0%</h4>
+                        </span>
+                    </span>
+                </span>
+                <!-- Overmorrow -->
+                <span class="three-day-forecast-card forecast-today">
+                    <h4 class="three-day-forecast-card-title">Overmorrow</h4>
+                    <span class="three-day-forecast-card-inline">
+                        <span class="icon forecast-overmorrow-icon"></span>
+                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
+                        <span class="forecast-today-chances">
+                            <h4>Rain: 40%</h4>
+                            <h4>Snow: 0%</h4>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+
         <!-- Current Weather Details -->
-        <div class="current-deails-container">
+        <div class="current-details-container">
             <h2>Weather Details:</h2>
             <div class="detail-card-grid">
                 <span class="detail-card">
@@ -95,46 +115,7 @@
             </div>
         </div>
         
-        <div class="forecast-info-container">
-            <h2>3 Day Forecast:</h2>
-            <div class="forecast-container">
-                <!-- Today -->
-                <span class="forecast-block forecast-today">
-                    <h4 class="forecast-block-title">Today</h4>
-                    <span class="forecast-block-inline">
-                        <span class="icon forecast-today-icon"></span>
-                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
-                        <span class="forecast-today-chances">
-                            <h4>Rain: 40%</h4>
-                            <h4>Snow: 0%</h4>
-                        </span>
-                    </span>
-                </span>
-                <!-- Tomorrow -->
-                <span class="forecast-block forecast-today">
-                    <h4 class="forecast-block-title">Tomorrow</h4>
-                    <span class="forecast-block-inline">
-                        <span class="icon forecast-tomorrow-icon"></span>
-                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
-                        <span class="forecast-today-chances">
-                            <h4>Rain: 40%</h4>
-                            <h4>Snow: 0%</h4>
-                        </span>
-                    </span>
-                </span>
-                <!-- Overmorrow -->
-                <span class="forecast-block forecast-today">
-                    <h4 class="forecast-block-title">Overmorrow</h4>
-                    <span class="forecast-block-inline">
-                        <span class="icon forecast-overmorrow-icon"></span>
-                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
-                        <span class="forecast-today-chances">
-                            <h4>Rain: 40%</h4>
-                            <h4>Snow: 0%</h4>
-                        </span>
-                    </span>
-                </span>
-            </div>
+        <div class="hourly-forecast-info-container">
             <h2>Hourly Forecast:</h2>
             <div class="hourly-forecast-container">
                 <span class="hourly-forecast-card">
@@ -259,6 +240,30 @@
                 </span>
             </div>
         </div>
+
+        <form action="" novalidate>
+            <div class="form-field">
+                <label for="location">Enter a Location:</label>
+                <input type="search" name="location" id="location" class="searchbar" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="form-field">
+                <fieldset>
+                    <legend>Select Units to Display:</legend>
+                    <div>
+                        <label for="metric">Metric:</label>
+                        <input type="radio" name="units" id="metric" value="Metric" checked>
+                    </div>
+                    <div>
+                        <label for="imperial">Imperial:</label>
+                        <input type="radio" name="units" id="imperial" value="Imperial">
+                    </div>
+                </fieldset>
+                <div class="error-message"></div>
+            </div>
+
+            <button>Get Weather</button>
+        </form>
     </div>
 </body>
 </html>

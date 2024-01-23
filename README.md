@@ -1,5 +1,11 @@
-# template-repository
+Add cursor on radio div
 
-To setup repository, initially run the command:
-    npm install
-to setup repository
+Replace weather-body grid layout with a flex-col where each row has it's own grid
+Row 1:
+    1/3 1/3 1/3
+Row 2:
+    1
+Row 3:
+    1/3 2/3
+Row 4:
+    1

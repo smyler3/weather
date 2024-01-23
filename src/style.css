@@ -16,9 +16,6 @@ body {
 
     width: 100vw;
     height: 100vh;
-
-    padding: 2rem 0;
-
 }
 
 /*
@@ -32,8 +29,7 @@ form {
     flex-direction: column;
     align-items: center;
 
-    width: 800px;
-    padding: 2rem 4rem;
+    padding: 2rem;
 
     border: 2px solid black;
     border-radius: 10px;
@@ -75,14 +71,50 @@ button {
 
 .weather-body {
     display: grid;
-    grid: 1fr 2fr / 1fr 2fr;
+    grid: auto auto 2fr 1fr / repeat(2, 3fr) 2fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
 
     width: 80vw;
     height: 100vh;
+
+    padding: 1rem;
     
     border: 1px solid black;
 
     font-size: 20px;
+}
+
+/* Row 1 */
+.location-info-container {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.current-weather-container {
+    grid-area: 1 / 2 / 2 / 3;
+} 
+
+.gif-container {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+/* Row 2 */
+.three-day-forecast-container {
+    grid-area: 2 / 1 / 3 / -1;
+}
+
+/* Row 3 */
+.current-details-container {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.hourly-forecast-info-container {
+    grid-area: 3 / 2 / 4 / -1;
+}
+
+/* Row 4 */
+form {
+    grid-area: 4 / 1 / -1 / -1;
 }
 
 /*
@@ -92,13 +124,13 @@ button {
  */
 
 .location-info-container {
-    background-color: aqua;
+
 }
 
 .location-inline-block {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .city {
@@ -116,9 +148,6 @@ button {
  */
 
 .current-weather-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 } 
 
 .current-temp {
@@ -131,21 +160,23 @@ button {
 
 /*
  * ------------------------------------------------------------
- * Forecast Styling
+ * Three Day Forecast Styling
  * ------------------------------------------------------------
  */
 
-.forecast-container {
+.three-day-forecast-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
+} 
+
+.three-day-forecast-card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2px;
-
-    /* border: 2px solid black;
-    border-radius: 10px;
-    background-color: black; */
+    column-gap: 2rem;
 }
 
-.forecast-block {
+.three-day-forecast-card {
     display: flex;
     flex-direction: column;
 
@@ -154,11 +185,11 @@ button {
     background-color: rgb(0, 238, 255);
 }
 
-.forecast-block-title {
+.three-day-forecast-card-title {
     text-align: center;
 }
 
-.forecast-block-inline {
+.three-day-forecast-card-inline {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -166,21 +197,20 @@ button {
 
 /*
  * ------------------------------------------------------------
- * Details Styling
+ * Current Details Styling
  * ------------------------------------------------------------
  */
 
-.current-deails-container {
-    display: flex;
-    flex-direction: column;
-
-    padding: 1rem;
+.current-details-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
 } 
 
 .detail-card-grid {
     display: grid;
     grid: repeat(3, 1fr) / repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
 
 }
 
@@ -188,6 +218,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     height: 100%;
 
@@ -197,22 +228,20 @@ button {
 
 /*
  * ------------------------------------------------------------
- * Details Styling
+ * Hourly Forecast Styling
  * ------------------------------------------------------------
  */
 
- .forecast-info-container {
-    display: flex;
-    flex-direction: column;
-
-    padding: 1rem;
+ .hourly-forecast-info-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
 } 
 
 .hourly-forecast-container {
     display: grid;
-    grid: repeat(2, 1fr) / repeat(12, 1fr);
-    gap: 1rem;
-
+    grid: repeat(4, 1fr) / repeat(6, 1fr);
+    gap: 0.5rem;
 }
 
 .hourly-forecast-card {
