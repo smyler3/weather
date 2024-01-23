@@ -10,6 +10,8 @@ Row 4:
 
 Fill page with recieved data
 
+Alter Date data with datetime libarary
+
 Add icons to the page
 
 Put all sections into cards with dark, low opacity backgrounds (w no border)

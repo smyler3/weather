@@ -1,3 +1,10 @@
+import {
+  fillLocationInfo,
+  fillCurrentWeatherInfo,
+  fill3DayForecast,
+  fillHourlyForecast,
+} from "./domManipulation";
+
 async function getLocationWeatherData(location) {
   try {
     const response = await fetch(
@@ -17,9 +24,14 @@ async function getLocationWeatherData(location) {
   }
 }
 
-async function extractWeatherData(data) {
-  const jsonData = await data.json();
-  console.log(jsonData);
+async function extractWeatherData(response) {
+  const data = await response.json();
+  console.log(data);
+  console.log(data.forecast.forecastday[0]);
+  fillLocationInfo(data.location);
+  // fillCurrentWeatherInfo(data.current);
+  // fill3DayForecast(data.forecastday);
+  // fillHourlyForecast(data.forecast.forecastday[0]);
 }
 
 const apiKey = "ed56e1bd01c548178dd145408242201";
