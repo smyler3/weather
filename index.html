@@ -45,44 +45,6 @@
                     <h4 class="snow-chance">Snow: 0%</h4>
                 </div>
             </div>
-            <div class="forecast-container">
-                <!-- Today -->
-                <span class="forecast-block forecast-today">
-                    <h4 class="forecast-block-title">Today</h4>
-                    <span class="forecast-block-inline">
-                        <span class="icon forecast-today-icon"></span>
-                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
-                        <span class="forecast-today-chances">
-                            <h4>Rain: 40%</h4>
-                            <h4>Snow: 0%</h4>
-                        </span>
-                    </span>
-                </span>
-                <!-- Tomorrow -->
-                <span class="forecast-block forecast-today">
-                    <h4 class="forecast-block-title">Tomorrow</h4>
-                    <span class="forecast-block-inline">
-                        <span class="icon forecast-today-icon"></span>
-                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
-                        <span class="forecast-today-chances">
-                            <h4>Rain: 40%</h4>
-                            <h4>Snow: 0%</h4>
-                        </span>
-                    </span>
-                </span>
-                <!-- Overmorrow -->
-                <span class="forecast-block forecast-today">
-                    <h4 class="forecast-block-title">Overmorrow</h4>
-                    <span class="forecast-block-inline">
-                        <span class="icon forecast-today-icon"></span>
-                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
-                        <span class="forecast-today-chances">
-                            <h4>Rain: 40%</h4>
-                            <h4>Snow: 0%</h4>
-                        </span>
-                    </span>
-                </span>
-            </div>
         </span>
 
         <!-- Location -->
@@ -104,33 +66,199 @@
 
         <!-- Current Weather Details -->
         <div class="current-deails-container">
-            <span class="detail-card">
-                <h4>Feels Like</h4>
-                <h2>3&deg;</h2>
-            </span>
-            <span class="detail-card">
-                <h4>UV</h4>
-                <h2>4</h2>
-            </span>
-            <span class="detail-card">
-                <h4>Humidity</h4>
-                <h2>45%</h2>
-            </span>
-            <span class="detail-card">
-                <h4>Precipitation</h4>
-                <h2>1000mm</h2>
-            </span>
-            <span class="detail-card">
-                <h4>Wind Speed</h4>
-                <h2>12KM/H</h2>
-            </span>
-            <span class="detail-card">
-                <h4>Wind Direction</h4>
-                <h2>WSW</h2>
-            </span>
+            <h2>Weather Details:</h2>
+            <div class="detail-card-grid">
+                <span class="detail-card">
+                    <h4>Feels Like</h4>
+                    <h2>3&deg;</h2>
+                </span>
+                <span class="detail-card">
+                    <h4>UV</h4>
+                    <h2>4</h2>
+                </span>
+                <span class="detail-card">
+                    <h4>Humidity</h4>
+                    <h2>45%</h2>
+                </span>
+                <span class="detail-card">
+                    <h4>Precipitation</h4>
+                    <h2>1000mm</h2>
+                </span>
+                <span class="detail-card">
+                    <h4>Wind Speed</h4>
+                    <h2>12KM/H</h2>
+                </span>
+                <span class="detail-card">
+                    <h4>Wind Direction</h4>
+                    <h2>WSW</h2>
+                </span>
+            </div>
         </div>
         
-        <div class="forecast-info-container"></div>
+        <div class="forecast-info-container">
+            <h2>3 Day Forecast:</h2>
+            <div class="forecast-container">
+                <!-- Today -->
+                <span class="forecast-block forecast-today">
+                    <h4 class="forecast-block-title">Today</h4>
+                    <span class="forecast-block-inline">
+                        <span class="icon forecast-today-icon"></span>
+                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
+                        <span class="forecast-today-chances">
+                            <h4>Rain: 40%</h4>
+                            <h4>Snow: 0%</h4>
+                        </span>
+                    </span>
+                </span>
+                <!-- Tomorrow -->
+                <span class="forecast-block forecast-today">
+                    <h4 class="forecast-block-title">Tomorrow</h4>
+                    <span class="forecast-block-inline">
+                        <span class="icon forecast-tomorrow-icon"></span>
+                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
+                        <span class="forecast-today-chances">
+                            <h4>Rain: 40%</h4>
+                            <h4>Snow: 0%</h4>
+                        </span>
+                    </span>
+                </span>
+                <!-- Overmorrow -->
+                <span class="forecast-block forecast-today">
+                    <h4 class="forecast-block-title">Overmorrow</h4>
+                    <span class="forecast-block-inline">
+                        <span class="icon forecast-overmorrow-icon"></span>
+                        <h4 class="forecast-today-low-high">4&deg;/20&deg;</h4>
+                        <span class="forecast-today-chances">
+                            <h4>Rain: 40%</h4>
+                            <h4>Snow: 0%</h4>
+                        </span>
+                    </span>
+                </span>
+            </div>
+            <h2>Hourly Forecast:</h2>
+            <div class="hourly-forecast-container">
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+                <span class="hourly-forecast-card">
+                    <h4>Time</h4>
+                    <span class="icon hourly-forecast-icon"></span>
+                    <h4>9&deg;</h4>
+                </span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
