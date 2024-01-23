@@ -12,8 +12,29 @@
             <input type="search" name="location" id="location" class="searchbar" required>
             <div class="error-message"></div>
         </div>
+        <div class="form-field">
+            <fieldset>
+                <legend>Select Units to Display:</legend>
+                <div>
+                    <label for="metric">Metric:</label>
+                    <input type="radio" name="units" id="metric" value="Metric">
+                </div>
+                <div>
+                    <label for="imperial">Imperial:</label>
+                    <input type="radio" name="units" id="imperial" value="Imperial">
+                </div>
+            </fieldset>
+            <div class="error-message"></div>
+        </div>
 
         <button>Get Weather</button>
     </form>
+
+    <!-- <div class="weather-body">
+        <span class="location-info-container"></span>
+        <span class="current-info-container"></span>
+        <div class="forecast-info-container"></div>
+        <div class="current-deails-container"></div>
+    </div> -->
 </body>
 </html>
