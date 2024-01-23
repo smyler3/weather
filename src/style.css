@@ -17,9 +17,15 @@ body {
     width: 100vw;
     height: 100vh;
 
-    padding-top: 2rem;
+    padding: 2rem 0;
 
 }
+
+/*
+ * ------------------------------------------------------------
+ * Search Form Styling
+ * ------------------------------------------------------------
+ */
 
 form {
     display: flex;
@@ -60,3 +66,51 @@ button {
 
     cursor: pointer;
 }
+
+/*
+ * ------------------------------------------------------------
+ * Weather Information Layout Styling
+ * ------------------------------------------------------------
+ */
+
+.weather-body {
+    display: grid;
+    grid: 1fr 2fr / 1fr 2fr;
+
+    width: 80vw;
+    height: 100vh;
+    
+    border: 1px solid black;
+}
+
+/*
+ * ------------------------------------------------------------
+ * Location Information Styling
+ * ------------------------------------------------------------
+ */
+
+.location-info-container {
+    background-color: aqua;
+
+    font-size: 20px;
+}
+
+.location-inline-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.city {
+    font-size: 80px;
+}
+
+.country {
+    font-size: 50px;
+}
+
+/*
+ * ------------------------------------------------------------
+ * Current Weather Information Styling
+ * ------------------------------------------------------------
+ */
