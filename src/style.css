@@ -81,6 +81,8 @@ button {
     height: 100vh;
     
     border: 1px solid black;
+
+    font-size: 20px;
 }
 
 /*
@@ -91,8 +93,6 @@ button {
 
 .location-info-container {
     background-color: aqua;
-
-    font-size: 20px;
 }
 
 .location-inline-block {
@@ -114,3 +114,11 @@ button {
  * Current Weather Information Styling
  * ------------------------------------------------------------
  */
+
+.current-temp {
+    font-size: 80px;
+}
+
+.current-weather-description {
+    font-size: 50px;
+}
