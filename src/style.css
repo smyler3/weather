@@ -171,18 +171,54 @@ button {
  */
 
 .current-deails-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+} 
+
+.detail-card-grid {
     display: grid;
     grid: repeat(3, 1fr) / repeat(2, 1fr);
     gap: 1rem;
 
-    padding: 1rem;
-} 
+}
 
 .detail-card {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    height: 100%;
+
     border: 1px solid black;
     border-radius: 10px
+}
+
+/*
+ * ------------------------------------------------------------
+ * Details Styling
+ * ------------------------------------------------------------
+ */
+
+ .forecast-info-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+} 
+
+.hourly-forecast-container {
+    display: grid;
+    grid: repeat(2, 1fr) / repeat(12, 1fr);
+    gap: 1rem;
+
+}
+
+.hourly-forecast-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid black;
 }
