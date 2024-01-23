@@ -31,22 +31,36 @@
     </form> -->
 
     <div class="weather-body">
+        <!-- Location -->
         <span class="location-info-container">
             <h1 class="city">PARIS</h1>
-            <h3 class="country">France</h3>
-            <span class="location-inline-block">
+            <h2 class="country">France</h2>
+            <div class="location-inline-block">
                 <span class="icon day-night-icon"></span>
                 <h4 class="local-time">6:38PM,</h4>
                 <h4 class="local-date">23 Jan 2024</h4>
-            </span>
-            <span class="location-inline-block">
+            </div>
+            <div class="location-inline-block">
                 <span class="icon sunrise-icon"></span>
                 <h4>Sunrise: 7:00AM</h4>
                 <span class="icon sunset-icon"></span>
                 <h4>Sunset: 8:07PM</h4>
-            </span>
+            </div>
         </span>
-        <span class="current-info-container"></span>
+        <!-- Current Weather -->
+        <span class="current-info-container">
+            <h1 class="current-temp">6&deg;</h1>
+            <div class="location-inline-block">
+                <h2 class="current-weather-description">Sunny</h2>
+                <span class="icon current-weather-icon"></span>
+            </div>
+            <div class="location-inline-block">
+                <h4 class="current-low-high">4&deg;/20&deg;</h4>
+                <h4 class="rain-chance">Rain: 40%</h4>
+                <h4 class="snow-chance">Snow: 0%</h4>
+            </div>
+        </span>
+        <!--  -->
         <div class="forecast-info-container"></div>
         <div class="current-deails-container"></div>
     </div>
