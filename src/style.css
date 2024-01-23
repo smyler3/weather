@@ -16,6 +16,10 @@ body {
 
     width: 100vw;
     height: 100vh;
+
+    background-color: grey;
+
+    color: white;
 }
 
 /*
@@ -29,10 +33,10 @@ form {
     flex-direction: column;
     align-items: center;
 
-    padding: 2rem;
+    padding: 1rem 2rem;
 
-    border: 2px solid black;
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.30);
 }
 
 .form-field {
@@ -117,6 +121,10 @@ form {
     grid-area: 4 / 1 / -1 / -1;
 }
 
+.subsection-header {
+    font-size: large;
+}
+
 /*
  * ------------------------------------------------------------
  * Location Information Styling
@@ -173,16 +181,15 @@ form {
 .three-day-forecast-card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 0.5rem;
 }
 
 .three-day-forecast-card {
     display: flex;
     flex-direction: column;
 
-    border: 2px solid black;
     border-radius: 10px;
-    background-color: rgb(0, 238, 255);
+    background-color: rgba(0, 0, 0, 0.30);
 }
 
 .three-day-forecast-card-title {
@@ -222,8 +229,8 @@ form {
 
     height: 100%;
 
-    border: 1px solid black;
-    border-radius: 10px
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.30);
 }
 
 /*
@@ -248,6 +255,13 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+.current-hour {
+    background-color: rgba(255, 255, 255, 0.80);
+
+    color: black
 }
