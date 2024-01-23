@@ -115,10 +115,51 @@ button {
  * ------------------------------------------------------------
  */
 
+.current-weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
 .current-temp {
     font-size: 80px;
 }
 
 .current-weather-description {
     font-size: 50px;
+}
+
+/*
+ * ------------------------------------------------------------
+ * Forecast Styling
+ * ------------------------------------------------------------
+ */
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2px;
+
+    /* border: 2px solid black;
+    border-radius: 10px;
+    background-color: black; */
+}
+
+.forecast-block {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(0, 238, 255);
+}
+
+.forecast-block-title {
+    text-align: center;
+}
+
+.forecast-block-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
