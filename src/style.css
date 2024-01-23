@@ -8,3 +8,55 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: 2rem;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 800px;
+    padding: 2rem 4rem;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.form-field {
+    display: grid;
+    grid-template-rows: auto repeat(2, 1fr);
+    
+    width: 100%;
+    height: 80px;
+}
+
+.searchbar {
+    border: 1px solid black;
+}
+/* Indicates an incorrect value in the search bar */
+.field-error {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.041);
+    outline: 1px solid red;
+}
+/* Explains the details of incorrectness  */
+.error-message {
+    color: rgb(252, 62, 62);
+}
+
+button {
+    padding: 0.7rem 1.4rem;
+
+    cursor: pointer;
+}
