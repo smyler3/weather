@@ -14,6 +14,8 @@ function fillLocationInfo(locationData) {
   countryName.textContent = locationData.country;
   [localDate.textContent, localTime.textContent] =
     locationData.localtime.split(" ");
+
+  markCurrentHour(localTime.textContent);
 }
 
 // Extract current weather information and add it to relevant elements of the page
@@ -35,17 +37,17 @@ function fill3DayForecast(daysForecastData) {
     let daySelector = `.day-${i}-forecast-card > div`;
     let weatherIcon = document.querySelector(`${daySelector} > .forecast-icon`);
     let lowHigh = document.querySelector(`${daySelector} > .forecast-low-high`);
-    let rain = document.querySelector(
-      `${daySelector} > div > .forecast-rain-chance`,
+    let rainChance = document.querySelector(
+      `${daySelector} > .forecast-chances > .icon-text-pair > .rain-icon`,
     );
-    let snow = document.querySelector(
-      `${daySelector} > div > .forecast-snow-chance`,
+    let snowChance = document.querySelector(
+      `${daySelector} > .forecast-chances > .icon-text-pair > .snow-icon`,
     );
     let dayData = daysForecastData[i];
 
     lowHigh.textContent = `${dayData.day.mintemp_c} / ${daysForecastData[i].day.maxtemp_c}`;
-    rain.textContent = `${dayData.day.daily_chance_of_rain}%`;
-    snow.textContent = `${dayData.day.daily_chance_of_snow}%`;
+    rainChance.textContent = `${dayData.day.daily_chance_of_rain}%`;
+    snowChance.textContent = `${dayData.day.daily_chance_of_snow}%`;
 
     if (i === 0) {
       const sunriseTime = document.querySelector(".sunrise-time");
@@ -99,6 +101,18 @@ function fillHourlyForecast(hourlyForecastData) {
 
     // TODO: Mark current hour
   }
+}
+
+function markCurrentHour(currentTime) {
+  const hourlyTimes = document.querySelectorAll(".hourly-time");
+
+  hourlyTimes.forEach((time) => {
+    const hourlyCard = time.parentElement;
+    console.log(parseInt(time.textContent) === parseInt(currentTime));
+    if (parseInt(time.textContent) === parseInt(currentTime)) {
+      hourlyCard.classList.add("current-hour");
+    }
+  });
 }
 
 const weatherIcons = {

@@ -25,10 +25,10 @@ async function getLocationWeatherData(location) {
 async function extractWeatherData(response) {
   const data = await response.json();
   console.log(data);
+  fillHourlyForecast(data.forecast.forecastday[0]);
   fillLocationInfo(data.location);
   fillCurrentWeatherInfo(data.current);
   fill3DayForecast(data.forecast.forecastday);
-  fillHourlyForecast(data.forecast.forecastday[0]);
 }
 
 const apiKey = "ed56e1bd01c548178dd145408242201";
