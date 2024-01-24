@@ -107,12 +107,16 @@ function fillHourlyForecast(hourlyForecastData) {
   }
 }
 
+// function addGif(url) {
+//   const gif = document.querySelector(".gif-container > img");
+//   gif.src = url;
+// }
+
 function markCurrentHour(currentTime) {
   const hourlyTimes = document.querySelectorAll(".hourly-time");
 
   hourlyTimes.forEach((time) => {
     const hourlyCard = time.parentElement;
-    console.log(parseInt(time.textContent) === parseInt(currentTime));
     if (parseInt(time.textContent) === parseInt(currentTime)) {
       hourlyCard.classList.add("current-hour");
     } else {

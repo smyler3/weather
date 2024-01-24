@@ -8,15 +8,6 @@ Row 3:
 Row 4:
     1
 
-Mark current hour
-
-Add icons for three day weather
-
-Add icons for hourly weather
-
-.icon not used
-
-
 Add gif
 
 add unit conversion
@@ -30,3 +21,8 @@ Alter Date data with datetime libarary
 refactor modules
 
 Add cursor on radio div
+
+pre-selected location range
+
+gif on fail search
+- Pre-selected gifs
