@@ -159,6 +159,18 @@ form {
     font-size: 50px;
 }
 
+.sunrise-icon,
+.sunset-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 20px;
+    width: 20px;
+
+    overflow: hidden;
+}
+
 /*
  * ------------------------------------------------------------
  * Current Weather Information Styling
@@ -174,6 +186,11 @@ form {
 
 .current-weather-description {
     font-size: 50px;
+}
+
+.weather-icon {
+    height: 58px;
+    width: 58px;
 }
 
 /*
@@ -251,6 +268,10 @@ form {
     background-color: rgba(0, 0, 0, 0.30);
 }
 
+.detail-card > h4 {
+    font-size: small;
+}
+
 /*
  * ------------------------------------------------------------
  * Hourly Forecast Styling
@@ -283,4 +304,8 @@ form {
     background-color: rgba(255, 255, 255, 0.80);
 
     color: black
+}
+
+.hourly-time {
+    font-size: small;
 }

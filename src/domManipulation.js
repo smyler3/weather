@@ -1,3 +1,7 @@
+import dayTime from "./assets/dayTime.png";
+import nightTime from "./assets/nightTime.png";
+
+// Extract location information and add it to related elements of the page
 function fillLocationInfo(locationData) {
   const cityName = document.querySelector(".city-name");
   const countryName = document.querySelector(".country-name");
@@ -10,19 +14,118 @@ function fillLocationInfo(locationData) {
     locationData.localtime.split(" ");
 }
 
+// Extract current weather information and add it to relevant elements of the page
 function fillCurrentWeatherInfo(currentData) {
-  //   fillWeatherDetails(jsonData);
+  const temp = document.querySelector(".current-temp");
+  const description = document.querySelector(".current-weather-description");
+  const weatherIcon = document.querySelector(".weather-icon > img");
+
+  temp.textContent = currentData.temp_c;
+  description.textContent = currentData.condition.text;
+  weatherIcon.src = currentData.condition.icon;
+  fillWeatherDetails(currentData);
 }
 
-function fill3DayForecast(daysForecastData) {}
+// Extract 3 day forecast information and add it to relevant elements of the page
+function fill3DayForecast(daysForecastData) {
+  const maxDays = 2;
+  for (let i = 0; i <= maxDays; i += 1) {
+    let daySelector = `.day-${i}-forecast-card > div`;
+    let weatherIcon = document.querySelector(`${daySelector} > .forecast-icon`);
+    let lowHigh = document.querySelector(`${daySelector} > .forecast-low-high`);
+    let rain = document.querySelector(
+      `${daySelector} > div > .forecast-rain-chance`,
+    );
+    let snow = document.querySelector(
+      `${daySelector} > div > .forecast-snow-chance`,
+    );
+    let dayData = daysForecastData[i];
 
-function fillWeatherDetails(detailsData) {}
+    lowHigh.textContent = `${dayData.day.mintemp_c} / ${daysForecastData[i].day.maxtemp_c}`;
+    rain.textContent = `Rain: ${dayData.day.daily_chance_of_rain}%`;
+    snow.textContent = `Snow: ${dayData.day.daily_chance_of_snow}%`;
 
-function fillHourlyForecast(hourlyForecastData) {}
+    if (i === 0) {
+      const sunriseTime = document.querySelector(".sunrise-time");
+      const sunsetTime = document.querySelector(".sunset-time");
+      const currentLowHigh = document.querySelector(".low-high-temp");
+      const currentRainChance = document.querySelector(".weather-rain-chance");
+      const currentSnowChance = document.querySelector(".weather-snow-chance");
+
+      sunriseTime.textContent = `: ${dayData.astro.sunrise}`;
+      sunsetTime.textContent = `: ${dayData.astro.sunset}`;
+      currentLowHigh.textContent = lowHigh.textContent;
+      currentRainChance.textContent = rain.textContent;
+      currentSnowChance.textContent = snow.textContent;
+    }
+  }
+}
+
+// Extract current weather details and add it to relevant elements of the page
+function fillWeatherDetails(detailsData) {
+  const feelsLike = document.querySelector(".detail-feels-like");
+  const uv = document.querySelector(".detail-uv");
+  const humidity = document.querySelector(".detail-humidity");
+  const precipitation = document.querySelector(".detail-precipitation");
+  const windSpeed = document.querySelector(".detail-wind-speed");
+  const windDirection = document.querySelector(".detail-wind-direction");
+
+  feelsLike.textContent = `${detailsData.feelslike_c}\u{B0}`;
+  uv.textContent = detailsData.uv;
+  humidity.textContent = `${detailsData.humidity}%`;
+  precipitation.textContent = `${detailsData.precip_mm} mm`;
+  windSpeed.textContent = `${detailsData.wind_kph} km/h`;
+  windDirection.textContent = detailsData.wind_dir;
+}
+
+// Extract hourly forecast information and add it to relevant elements of the page
+function fillHourlyForecast(hourlyForecastData) {
+  const maxHour = 23;
+  for (let i = 0; i <= maxHour; i += 1) {
+    let hourSelector = `.hour-${i}`;
+    let hourlyTime = document.querySelector(`${hourSelector} > .hourly-time`);
+    let hourlyIcon = document.querySelector(
+      `${hourSelector} > .hourly-forecast-icon`,
+    );
+    let hourlyTemp = document.querySelector(
+      `${hourSelector} > .hourly-temperature`,
+    );
+    let hourData = hourlyForecastData.hour[i];
+
+    hourlyTime.textContent = hourData.time.split(" ")[1];
+    hourlyTemp.textContent = `${hourData.temp_c}\u{B0}`;
+
+    // TODO: Mark current hour
+  }
+}
+
+const weatherIcons = {
+  LIGHTRAIN: "//cdn.weatherapi.com/weather/64x64/night/296.png",
+  MIST: "//cdn.weatherapi.com/weather/64x64/day/143.png",
+  FOG: "//cdn.weatherapi.com/weather/64x64/night/248.png",
+  SUNNY: "//cdn.weatherapi.com/weather/64x64/day/113.png",
+  OVERCAST: "//cdn.weatherapi.com/weather/64x64/night/122.png",
+  LIGHTDRIZZLE: "//cdn.weatherapi.com/weather/64x64/night/266.png",
+  LIGHTSNOW: "//cdn.weatherapi.com/weather/64x64/night/326.png",
+};
+
+const dayNightIcons = {
+  0: nightTime,
+  1: dayTime,
+};
+
+function addIcons() {
+  const sunriseIcon = document.querySelector(".sunrise-icon > img");
+  const sunsetIcon = document.querySelector(".sunset-icon > img");
+
+  sunriseIcon.src = dayTime;
+  sunsetIcon.src = nightTime;
+}
 
 export {
   fillLocationInfo,
   fillCurrentWeatherInfo,
   fill3DayForecast,
   fillHourlyForecast,
+  addIcons,
 };

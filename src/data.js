@@ -11,8 +11,6 @@ async function getLocationWeatherData(location) {
       `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=3`,
     );
 
-    console.log(response);
-
     // Invalid location
     if (response.status === 400) {
       return Promise.reject("Location not recognised!");
@@ -27,11 +25,10 @@ async function getLocationWeatherData(location) {
 async function extractWeatherData(response) {
   const data = await response.json();
   console.log(data);
-  console.log(data.forecast.forecastday[0]);
   fillLocationInfo(data.location);
-  // fillCurrentWeatherInfo(data.current);
-  // fill3DayForecast(data.forecastday);
-  // fillHourlyForecast(data.forecast.forecastday[0]);
+  fillCurrentWeatherInfo(data.current);
+  fill3DayForecast(data.forecast.forecastday);
+  fillHourlyForecast(data.forecast.forecastday[0]);
 }
 
 const apiKey = "ed56e1bd01c548178dd145408242201";
