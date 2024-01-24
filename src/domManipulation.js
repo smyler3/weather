@@ -90,6 +90,7 @@ function fillHourlyForecast(hourlyForecastData) {
   const maxHour = 23;
   for (let i = 0; i <= maxHour; i += 1) {
     let hourSelector = `.hour-${i}`;
+
     let hourlyTime = document.querySelector(`${hourSelector} > .hourly-time`);
     let hourlyIcon = document.querySelector(
       `${hourSelector} > .hourly-forecast-icon`,
@@ -97,12 +98,12 @@ function fillHourlyForecast(hourlyForecastData) {
     let hourlyTemp = document.querySelector(
       `${hourSelector} > .hourly-temperature`,
     );
+
     let hourData = hourlyForecastData.hour[i];
 
     hourlyTime.textContent = hourData.time.split(" ")[1];
+    hourlyIcon.src = hourData.condition.icon;
     hourlyTemp.textContent = `${hourData.temp_c}\u{B0}`;
-
-    // TODO: Mark current hour
   }
 }
 
@@ -114,6 +115,8 @@ function markCurrentHour(currentTime) {
     console.log(parseInt(time.textContent) === parseInt(currentTime));
     if (parseInt(time.textContent) === parseInt(currentTime)) {
       hourlyCard.classList.add("current-hour");
+    } else {
+      hourlyCard.classList.remove("current-hour");
     }
   });
 }

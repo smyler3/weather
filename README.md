@@ -4,7 +4,7 @@ Row 1:
 Row 2:
     1
 Row 3:
-    1/3 2/3
+    1/3 2/3 (or auto / 1fr)
 Row 4:
     1
 

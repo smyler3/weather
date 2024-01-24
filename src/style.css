@@ -172,6 +172,11 @@ form {
     width: 46px;
 }
 
+.hourly-forecast-icon {
+    height: 30px;
+    width: 30px;
+}
+
 /*
  * ------------------------------------------------------------
  * Location Information Styling
@@ -180,6 +185,11 @@ form {
 
 .location-info-container {
 
+}
+
+.city-name,
+.country-name {
+    overflow: hidden;
 }
 
 .city-name {
@@ -301,15 +311,15 @@ form {
 
 .hourly-forecast-card-grid {
     display: grid;
-    grid: repeat(4, 1fr) / repeat(6, 1fr);
+    grid: repeat(3, 1fr) / repeat(8, 1fr);
     gap: 0.5rem;
 }
 
 .hourly-forecast-card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
 
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.30);
