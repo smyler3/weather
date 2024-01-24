@@ -8,14 +8,21 @@ Row 3:
 Row 4:
     1
 
-Fill page with recieved data
+Mark current hour
+
+Add icons for three day weather
+
+Add icons for hourly weather
+
+Add gif
+
+add unit conversion
+
+- Add page background colour based on weather (grey - blue - black)
+- Use differest whites to contrast important text
 
 Alter Date data with datetime libarary
 
-Add icons to the page
-
-Put all sections into cards with dark, low opacity backgrounds (w no border)
-- Add page background colour based on weather (grey - blue - black)
-- Use differest whites to contrast important text
+refactor modules
 
 Add cursor on radio div

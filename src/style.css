@@ -138,7 +138,33 @@ form {
 .precipitation-info {
     display: flex;
     align-items: center;
+    gap: 1rem;
+}
+
+/*
+ * ------------------------------------------------------------
+ * Icon Styling
+ * ------------------------------------------------------------
+ */
+
+.rain-icon,
+.snow-icon,
+.sunrise-icon,
+.sunset-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.icon-text-pair {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 0.5rem;
+}
+
+.weather-icon {
+    height: 58px;
+    width: 58px;
 }
 
 /*
@@ -159,18 +185,6 @@ form {
     font-size: 50px;
 }
 
-.sunrise-icon,
-.sunset-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 20px;
-    width: 20px;
-
-    overflow: hidden;
-}
-
 /*
  * ------------------------------------------------------------
  * Current Weather Information Styling
@@ -186,11 +200,6 @@ form {
 
 .current-weather-description {
     font-size: 50px;
-}
-
-.weather-icon {
-    height: 58px;
-    width: 58px;
 }
 
 /*

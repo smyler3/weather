@@ -1,5 +1,7 @@
 import dayTime from "./assets/dayTime.png";
 import nightTime from "./assets/nightTime.png";
+import rain from "./assets/rain.png";
+import snow from "./assets/snow.png";
 
 // Extract location information and add it to related elements of the page
 function fillLocationInfo(locationData) {
@@ -18,7 +20,7 @@ function fillLocationInfo(locationData) {
 function fillCurrentWeatherInfo(currentData) {
   const temp = document.querySelector(".current-temp");
   const description = document.querySelector(".current-weather-description");
-  const weatherIcon = document.querySelector(".weather-icon > img");
+  const weatherIcon = document.querySelector(".weather-icon");
 
   temp.textContent = currentData.temp_c;
   description.textContent = currentData.condition.text;
@@ -42,8 +44,8 @@ function fill3DayForecast(daysForecastData) {
     let dayData = daysForecastData[i];
 
     lowHigh.textContent = `${dayData.day.mintemp_c} / ${daysForecastData[i].day.maxtemp_c}`;
-    rain.textContent = `Rain: ${dayData.day.daily_chance_of_rain}%`;
-    snow.textContent = `Snow: ${dayData.day.daily_chance_of_snow}%`;
+    rain.textContent = `${dayData.day.daily_chance_of_rain}%`;
+    snow.textContent = `${dayData.day.daily_chance_of_snow}%`;
 
     if (i === 0) {
       const sunriseTime = document.querySelector(".sunrise-time");
@@ -52,8 +54,8 @@ function fill3DayForecast(daysForecastData) {
       const currentRainChance = document.querySelector(".weather-rain-chance");
       const currentSnowChance = document.querySelector(".weather-snow-chance");
 
-      sunriseTime.textContent = `: ${dayData.astro.sunrise}`;
-      sunsetTime.textContent = `: ${dayData.astro.sunset}`;
+      sunriseTime.textContent = `${dayData.astro.sunrise}`;
+      sunsetTime.textContent = `${dayData.astro.sunset}`;
       currentLowHigh.textContent = lowHigh.textContent;
       currentRainChance.textContent = rain.textContent;
       currentSnowChance.textContent = snow.textContent;
@@ -109,17 +111,20 @@ const weatherIcons = {
   LIGHTSNOW: "//cdn.weatherapi.com/weather/64x64/night/326.png",
 };
 
-const dayNightIcons = {
-  0: nightTime,
-  1: dayTime,
-};
-
 function addIcons() {
-  const sunriseIcon = document.querySelector(".sunrise-icon > img");
-  const sunsetIcon = document.querySelector(".sunset-icon > img");
+  const sunriseIcon = document.querySelector(".sunrise-icon");
+  const sunsetIcon = document.querySelector(".sunset-icon");
+  const rainIcons = document.querySelectorAll(".rain-icon");
+  const snowIcons = document.querySelectorAll(".snow-icon");
 
   sunriseIcon.src = dayTime;
   sunsetIcon.src = nightTime;
+  rainIcons.forEach((icon) => {
+    icon.src = rain;
+  });
+  snowIcons.forEach((icon) => {
+    icon.src = snow;
+  });
 }
 
 export {
