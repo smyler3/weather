@@ -167,6 +167,11 @@ form {
     width: 58px;
 }
 
+.forecast-icon {
+    height: 46px;
+    width: 46px;
+}
+
 /*
  * ------------------------------------------------------------
  * Location Information Styling
@@ -238,6 +243,7 @@ form {
 
 .forecast-card-title {
     text-align: center;
+    font-size: small;
 }
 
 .forecast-card-details {

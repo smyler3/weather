@@ -35,6 +35,7 @@ function fill3DayForecast(daysForecastData) {
   const maxDays = 2;
   for (let i = 0; i <= maxDays; i += 1) {
     let daySelector = `.day-${i}-forecast-card > div`;
+
     let weatherIcon = document.querySelector(`${daySelector} > .forecast-icon`);
     let lowHigh = document.querySelector(`${daySelector} > .forecast-low-high`);
     let rainChance = document.querySelector(
@@ -43,8 +44,10 @@ function fill3DayForecast(daysForecastData) {
     let snowChance = document.querySelector(
       `${daySelector} > .forecast-chances > .icon-text-pair > .snow-icon`,
     );
+
     let dayData = daysForecastData[i];
 
+    weatherIcon.src = daysForecastData[i].day.condition.icon;
     lowHigh.textContent = `${dayData.day.mintemp_c} / ${daysForecastData[i].day.maxtemp_c}`;
     rainChance.textContent = `${dayData.day.daily_chance_of_rain}%`;
     snowChance.textContent = `${dayData.day.daily_chance_of_snow}%`;
@@ -59,8 +62,8 @@ function fill3DayForecast(daysForecastData) {
       sunriseTime.textContent = `${dayData.astro.sunrise}`;
       sunsetTime.textContent = `${dayData.astro.sunset}`;
       currentLowHigh.textContent = lowHigh.textContent;
-      currentRainChance.textContent = rain.textContent;
-      currentSnowChance.textContent = snow.textContent;
+      currentRainChance.textContent = rainChance.textContent;
+      currentSnowChance.textContent = snowChance.textContent;
     }
   }
 }

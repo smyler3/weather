@@ -14,6 +14,9 @@ Add icons for three day weather
 
 Add icons for hourly weather
 
+.icon not used
+
+
 Add gif
 
 add unit conversion
