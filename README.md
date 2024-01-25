@@ -8,15 +8,13 @@ Row 3:
 Row 4:
     1
 
-Add gif
-
 add unit conversion
 - pull all dom functions into one large one then subdivide?
 
 - Add page background colour based on weather (grey - blue - black)
 - Use differest whites to contrast important text (lighter white (greyish))
 
-Alter Date data with datetime libarary
+Alter Datetime data with datetime libarary
 
 refactor modules
 
