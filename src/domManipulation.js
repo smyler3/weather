@@ -3,11 +3,120 @@ import nightTime from "./assets/nightTime.png";
 import rain from "./assets/rain.png";
 import snow from "./assets/snow.png";
 
+// Mapping of weather conditions to colours that represent them
+const weatherColorMapping = [
+  { conditions: ["Sunny"], colour: "#5196d7" },
+  { conditions: ["Clear"], colour: "#0d1730" },
+  { conditions: ["Partly cloudy"], colour: "#89a1b8" },
+  {
+    conditions: [
+      "Cloudy",
+      "Overcast",
+      "Mist",
+      "Patchy rain possible",
+      "Patchy snow possible",
+      "Patchy sleet possible",
+    ],
+    colour: "#6f809d",
+  },
+  {
+    conditions: [
+      "Thundery outbreaks possible",
+      "Blowing snow",
+      "Blizzard",
+      "Freezing fog",
+      "Patchy light drizzle",
+      "Light drizzle",
+      "Freezing drizzle",
+      "Heavy freezing drizzle",
+    ],
+    colour: "#121824",
+  },
+  { conditions: ["Fog"], colour: "#6f809d" },
+  {
+    conditions: [
+      "Light freezing rain",
+      "Moderate or heavy freezing rain",
+      "Light sleet",
+      "Moderate or heavy sleet",
+    ],
+    colour: "#7a87aa",
+  },
+  {
+    conditions: [
+      "Patchy light snow",
+      "Light snow",
+      "Patchy moderate snow",
+      "Moderate snow",
+      "Patchy heavy snow",
+      "Heavy snow",
+    ],
+    colour: "#7a87aa",
+  },
+  { conditions: ["Ice pellets"], colour: "#6f809d" },
+  {
+    conditions: [
+      "Light rain",
+      "Moderate rain at times",
+      "Moderate rain",
+      "Heavy rain at times",
+      "Heavy rain",
+    ],
+    colour: "#546174",
+  },
+  {
+    conditions: [
+      "Light rain shower",
+      "Moderate or heavy rain shower",
+      "Torrential rain shower",
+    ],
+    colour: "#546174",
+  },
+  {
+    conditions: [
+      "Light sleet showers",
+      "Moderate or heavy sleet showers",
+      "Light snow showers",
+      "Moderate or heavy snow showers",
+    ],
+    colour: "#7a87aa",
+  },
+  {
+    conditions: [
+      "Light showers of ice pellets",
+      "Moderate or heavy showers of ice pellets",
+    ],
+    colour: "#7a87aa",
+  },
+  {
+    conditions: [
+      "Patchy light rain with thunder",
+      "Moderate or heavy rain with thunder",
+      "Patchy light snow with thunder",
+      "Moderate or heavy snow with thunder",
+    ],
+    colour: "#121824",
+  },
+];
+
+// Colour the page background based on current weather conditions
+function colourBackground(condition) {
+  const page = document.querySelector("body");
+
+  weatherColorMapping.forEach((weatherGroup) => {
+    if (weatherGroup.conditions.includes(condition)) {
+      page.style.backgroundColor = weatherGroup.colour;
+    }
+  });
+}
+
 // Mark the current time on the hourly forecast cards
 function markCurrentHour(currentTime) {
+  console.log(currentTime);
   const hourlyTimes = document.querySelectorAll(".hourly-time");
 
   hourlyTimes.forEach((time) => {
+    console.log(time.textContent);
     const hourlyCard = time.parentElement;
     if (parseInt(time.textContent) === parseInt(currentTime)) {
       hourlyCard.classList.add("current-hour");
@@ -402,21 +511,45 @@ export default function fillPageData(data, units) {
     document.querySelector(iconElem.selector).src = iconElem.data;
   });
 
-  markCurrentHour(data.location.localtime.split(" ")[0]);
+  markCurrentHour(data.location.localtime.split(" ")[1]);
   addIcons();
+  colourBackground(data.current.condition.text);
 }
+
+// const backgroundColours = [
+//   { codes: [1000], values: ["Sunny", "Clear"], colour: "" },
+//   {
+//     codes: [1003, 1006, 1009],
+//     values: ["Partly Cloudy", "Cloudy", "Overcast"],
+//     colour: "",
+//   },
+//   { codes: [1030], values: ["Mist"], colour: "" },
+//   {
+//     codes: [1063, 1066, 1069, 1072],
+//     values: [
+//       "Patchy rain possible",
+//       "Patchy snow possible",
+//       "Patchy sleet possible",
+//       "Patchy freezing drizzle possible",
+//     ],
+//     colour: "",
+//   },
+//   { codes: [1087], values: ["Thundery outbreaks possible"], colour: "" },
+//   { codes: [1114, 1117], values: ["Blowing snow", "Blizzard"], colour: "" },
+//   { codes: [1135], values: ["Fog"], colour: "" },
+//   {
+//     codes: [1147, 1150, 1153],
+//     values: ["Freezing fog", "Patchy light drizzle", "Light drizzle"],
+//     colour: "",
+//   },
+//   {
+//     codes: [1168, 1171],
+//     values: ["Freezing drizzle", "Heavy freezing drizzle"],
+//     colour: "",
+//   },
+// ];
 
 // function addGif(url) {
 //   const gif = document.querySelector(".gif-container > img");
 //   gif.src = url;
 // }
-
-const weatherIcons = {
-  LIGHTRAIN: "//cdn.weatherapi.com/weather/64x64/night/296.png",
-  MIST: "//cdn.weatherapi.com/weather/64x64/day/143.png",
-  FOG: "//cdn.weatherapi.com/weather/64x64/night/248.png",
-  SUNNY: "//cdn.weatherapi.com/weather/64x64/day/113.png",
-  OVERCAST: "//cdn.weatherapi.com/weather/64x64/night/122.png",
-  LIGHTDRIZZLE: "//cdn.weatherapi.com/weather/64x64/night/266.png",
-  LIGHTSNOW: "//cdn.weatherapi.com/weather/64x64/night/326.png",
-};
