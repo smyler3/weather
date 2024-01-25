@@ -1,4 +1,4 @@
-export default function addImperialData(data, units) {
+export default function fillPageData(data, units) {
   const nonUnitTextData = [
     // Location details
     { selector: ".city-name", data: data.location.name.toUpperCase() },

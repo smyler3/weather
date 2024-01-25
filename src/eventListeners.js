@@ -1,5 +1,5 @@
-import addImperialData from "../imperial";
-import { getLocationWeatherData } from "./data";
+import getWeatherData from "./apiCalls";
+import fillPageData from "./domManipulation";
 
 // Indicate an error in the search
 function displaySearchError(searchBar, error) {
@@ -14,7 +14,8 @@ function removeSearchError(searchBar) {
   searchBar.classList.remove("field-error");
 }
 
-export default function initialiseSearchBar() {
+// Try to add data to page based on searchbar result
+export default function addSearchBarEventListener() {
   const submitBtn = document.querySelector("button");
   const searchBar = document.querySelector("#location");
 
@@ -26,15 +27,13 @@ export default function initialiseSearchBar() {
       displaySearchError(searchBar, error);
     } else {
       const units = document.querySelector('input[name="units"]:checked').value;
-      const data = await getLocationWeatherData(searchBar.value).catch(
-        (error) => {
-          displaySearchError(searchBar, error);
-        },
-      );
+      const data = await getWeatherData(searchBar.value).catch((error) => {
+        displaySearchError(searchBar, error);
+      });
 
       console.log(data);
       removeSearchError(searchBar);
-      addImperialData(data, units);
+      fillPageData(data, units);
     }
   });
 }

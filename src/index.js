@@ -1,7 +1,4 @@
-import { getLocationWeatherData } from "./data";
-import initialiseSearchBar, { initaliseSearchBar } from "./form";
-import { addIcons } from "./domManipulation";
+import addSearchBarEventListener from "./eventListeners";
 import "./style.css";
 
-initialiseSearchBar();
-addIcons();
+addSearchBarEventListener();

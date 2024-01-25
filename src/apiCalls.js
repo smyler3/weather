@@ -1,12 +1,6 @@
-import {
-  fillLocationInfo,
-  fillCurrentWeatherInfo,
-  fill3DayForecast,
-  fillHourlyForecast,
-  addGif,
-} from "./domManipulation";
+export default async function getWeatherData(location) {
+  const weatherApiKey = "ed56e1bd01c548178dd145408242201";
 
-async function getLocationWeatherData(location) {
   try {
     const response = await fetch(
       `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${location}&days=3`,
@@ -39,7 +33,4 @@ async function getLocationWeatherData(location) {
 //   addGif(jsonData.data.images.fixed_height_small.url);
 // }
 
-const weatherApiKey = "ed56e1bd01c548178dd145408242201";
 // const gifApiKey = "TuqD2iuVA7pLwDtPdA9f5kV5rHttZKzx";
-
-export { getLocationWeatherData };
