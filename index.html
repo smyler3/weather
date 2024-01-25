@@ -7,51 +7,48 @@
 <script defer src="main.bundle.js"></script></head>
 <body>
     <div class="weather-container">
-        <!-- Location -->
-        <span class="location-info-container">
-            <h1 class="city-name">PARIS</h1>
-            <h2 class="country-name">France</h2>
-            <div class="location-details">
-                <h4 class="local-time">6:38PM</h4>
-                <h4 class="local-date">23 Jan 2024</h4>
-            </div>
-            <div class="sun-info">
-                <span class="icon-text-pair">
-                    <img src="" alt="" class="sunrise-icon">
-                    <h4 class="sunrise-time">7:00AM</h4>
-                </span>
-                <span class="icon-text-pair">
-                    <img src="" alt="" class="sunset-icon">
-                    <h4 class="sunset-time">8:07PM</h4>
-                </span>
-            </div>
-        </span>
-
-        <!-- Current Weather -->
-        <span class="current-weather-container">
-            <div class="current-weather-details">
-                <h1 class="current-temp">6&deg;</h1>
-                <div class="weather-description">
-                    <h2 class="current-weather-description">Sunny</h2>
-                    <img src="" alt="" class="weather-icon">
+        <div class="row-1">
+            <!-- Location -->
+            <span class="location-info-container">
+                <h1 class="city-name">PARIS</h1>
+                <h2 class="country-name">France</h2>
+                <div class="location-details">
+                    <h4 class="local-time">6:38PM</h4>
+                    <h4 class="local-date">23 Jan 2024</h4>
                 </div>
-                <h4 class="low-high-temp">4&deg; / 20&deg;</h4>
-                <div class="precipitation-info">
+                <div class="sun-info">
                     <span class="icon-text-pair">
-                        <img src="" alt="" class="rain-icon">
-                        <h4 class="weather-rain-chance">40%</h4>
+                        <img src="" alt="" class="sunrise-icon">
+                        <h4 class="sunrise-time">7:00AM</h4>
                     </span>
                     <span class="icon-text-pair">
-                        <img src="" alt="" class="snow-icon">
-                        <h4 class="weather-snow-chance">0%</h4>
+                        <img src="" alt="" class="sunset-icon">
+                        <h4 class="sunset-time">8:07PM</h4>
                     </span>
                 </div>
-            </div>
-        </span>
-        
-        <span class="gif-container">
-            <img src="" alt="">
-        </span>
+            </span>
+            <!-- Current Weather -->
+            <span class="current-weather-container">
+                <div class="current-weather-details">
+                    <h1 class="current-temp">6&deg;</h1>
+                    <div class="weather-description">
+                        <h2 class="current-weather-description">Sunny</h2>
+                        <img src="" alt="" class="weather-icon">
+                    </div>
+                    <h4 class="low-high-temp">4&deg; / 20&deg;</h4>
+                    <div class="precipitation-info">
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="rain-icon">
+                            <h4 class="weather-rain-chance">40%</h4>
+                        </span>
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="snow-icon">
+                            <h4 class="weather-snow-chance">0%</h4>
+                        </span>
+                    </div>
+                </div>
+            </span>
+        </div>
 
         <!-- Three Day Forecast -->
         <div class="three-day-forecast-container">
@@ -59,241 +56,242 @@
             <div class="three-day-forecast-card-grid">
                 <!-- Today -->
                 <div class="three-day-forecast-card day-0-forecast-card">
-                    <h4 class="forecast-card-title">Today</h4>
+                    <img src="" alt="" class=" forecast-icon">
                     <div class="forecast-card-details">
-                        <img src="" alt="" class=" forecast-icon">
+                        <h4 class="forecast-card-title">Today</h4>
                         <h4 class="forecast-low-high">4&deg; / 20&deg;</h4>
-                        <div class="forecast-chances">
-                            <span class="icon-text-pair">
-                                <img src="" alt="" class="rain-icon">
-                                <h4 class="weather-rain-chance">40%</h4>
-                            </span>
-                            <span class="icon-text-pair">
-                                <img src="" alt="" class="snow-icon">
-                                <h4 class="weather-snow-chance">0%</h4>
-                            </span>
-                        </div>
+                    </div>
+                    <div class="forecast-chances">
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="rain-icon">
+                            <h4 class="weather-rain-chance">40%</h4>
+                        </span>
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="snow-icon">
+                            <h4 class="weather-snow-chance">0%</h4>
+                        </span>
                     </div>
                 </div>
                 <!-- Tomorrow -->
                 <div class="three-day-forecast-card day-1-forecast-card">
-                    <h4 class="forecast-card-title">Tomorrow</h4>
+                    <img src="" alt="" class=" forecast-icon">
                     <div class="forecast-card-details">
-                        <img src="" alt="" class=" forecast-icon">
+                        <h4 class="forecast-card-title">Tomorrow</h4>
                         <h4 class="forecast-low-high">4&deg; / 20&deg;</h4>
-                        <div class="forecast-chances">
-                            <span class="icon-text-pair">
-                                <img src="" alt="" class="rain-icon">
-                                <h4 class="weather-rain-chance">40%</h4>
-                            </span>
-                            <span class="icon-text-pair">
-                                <img src="" alt="" class="snow-icon">
-                                <h4 class="weather-snow-chance">0%</h4>
-                            </span>
-                        </div>
+                    </div>
+                    <div class="forecast-chances">
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="rain-icon">
+                            <h4 class="weather-rain-chance">40%</h4>
+                        </span>
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="snow-icon">
+                            <h4 class="weather-snow-chance">0%</h4>
+                        </span>
                     </div>
                 </div>
                 <!-- Overmorrow -->
                 <div class="three-day-forecast-card day-2-forecast-card">
-                    <h4 class="forecast-card-title">Overmorrow</h4>
+                    <img src="" alt="" class=" forecast-icon">
                     <div class="forecast-card-details">
-                        <img src="" alt="" class=" forecast-icon">
+                        <h4 class="forecast-card-title">Overmorrow</h4>
                         <h4 class="forecast-low-high">4&deg; / 20&deg;</h4>
-                        <div class="forecast-chances">
-                            <span class="icon-text-pair">
-                                <img src="" alt="" class="rain-icon">
-                                <h4 class="weather-rain-chance">40%</h4>
-                            </span>
-                            <span class="icon-text-pair">
-                                <img src="" alt="" class="snow-icon">
-                                <h4 class="weather-snow-chance">0%</h4>
-                            </span>
-                        </div>
+                    </div>
+                    <div class="forecast-chances">
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="rain-icon">
+                            <h4 class="weather-rain-chance">40%</h4>
+                        </span>
+                        <span class="icon-text-pair">
+                            <img src="" alt="" class="snow-icon">
+                            <h4 class="weather-snow-chance">0%</h4>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>        
 
-        <!-- Current Weather Details -->
-        <div class="current-details-container">
-            <h2 class="subsection-header">Weather Details:</h2>
-            <div class="detail-card-grid">
-                <div class="detail-card">
-                    <h4>Feels Like</h4>
-                    <h2 class="detail-feels-like">3&deg;</h2>
-                </div>
-                <div class="detail-card">
-                    <h4>UV</h4>
-                    <h2 class="detail-uv">4</h2>
-                </div>
-                <div class="detail-card">
-                    <h4>Humidity</h4>
-                    <h2 class="detail-humidity">45%</h2>
-                </div>
-                <div class="detail-card">
-                    <h4>Precipitation</h4>
-                    <h2 class="detail-precipitation">1000mm</h2>
-                </div>
-                <div class="detail-card">
-                    <h4>Wind Speed</h4>
-                    <h2 class="detail-wind-speed">12KM/H</h2>
-                </div>
-                <div class="detail-card">
-                    <h4>Wind Direction</h4>
-                    <h2 class="detail-wind-direction">WSW</h2>
+        <div class="row-3">
+            <!-- Current Weather Details -->
+            <div class="current-details-container">
+                <h2 class="subsection-header">Weather Details:</h2>
+                <div class="detail-card-grid">
+                    <div class="detail-card">
+                        <h4>Feels Like</h4>
+                        <h2 class="detail-feels-like">3&deg;</h2>
+                    </div>
+                    <div class="detail-card">
+                        <h4>UV</h4>
+                        <h2 class="detail-uv">4</h2>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Humidity</h4>
+                        <h2 class="detail-humidity">45%</h2>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Precipitation</h4>
+                        <h2 class="detail-precipitation">1000mm</h2>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Wind Speed</h4>
+                        <h2 class="detail-wind-speed">12KM/H</h2>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Wind Direction</h4>
+                        <h2 class="detail-wind-direction">WSW</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        
-        <!-- Hourly Forecast -->
-        <div class="hourly-forecast-info-container">
-            <h2 class="subsection-header">Hourly Forecast:</h2>
-            <div class="hourly-forecast-card-grid">
-                <!-- Hourly Forecast Card for hour 0 -->
-                <span class="hourly-forecast-card hour-0">
-                    <h4 class="hourly-time">12AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 1 -->
-                <span class="hourly-forecast-card hour-1">
-                    <h4 class="hourly-time">1AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 2 -->
-                <span class="hourly-forecast-card hour-2">
-                    <h4 class="hourly-time">2AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 3 -->
-                <span class="hourly-forecast-card hour-3">
-                    <h4 class="hourly-time">3AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 4 -->
-                <span class="hourly-forecast-card hour-4">
-                    <h4 class="hourly-time">4AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 5 -->
-                <span class="hourly-forecast-card hour-5">
-                    <h4 class="hourly-time">5AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 6 -->
-                <span class="hourly-forecast-card hour-6">
-                    <h4 class="hourly-time">6AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 7 -->
-                <span class="hourly-forecast-card hour-7">
-                    <h4 class="hourly-time">7AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 8 -->
-                <span class="hourly-forecast-card hour-8">
-                    <h4 class="hourly-time">8AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 9 -->
-                <span class="hourly-forecast-card hour-9">
-                    <h4 class="hourly-time">9AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 10 -->
-                <span class="hourly-forecast-card hour-10">
-                    <h4 class="hourly-time">10AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 11 -->
-                <span class="hourly-forecast-card hour-11">
-                    <h4 class="hourly-time">11AM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 12 -->
-                <span class="hourly-forecast-card hour-12">
-                    <h4 class="hourly-time">12PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 13 -->
-                <span class="hourly-forecast-card hour-13">
-                    <h4 class="hourly-time">1PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 14 -->
-                <span class="hourly-forecast-card hour-14">
-                    <h4 class="hourly-time">2PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 15 -->
-                <span class="hourly-forecast-card hour-15">
-                    <h4 class="hourly-time">3PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 16 -->
-                <span class="hourly-forecast-card hour-16">
-                    <h4 class="hourly-time">4PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 17 -->
-                <span class="hourly-forecast-card hour-17">
-                    <h4 class="hourly-time">5PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 18 -->
-                <span class="hourly-forecast-card hour-18">
-                    <h4 class="hourly-time">6PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 19 -->
-                <span class="hourly-forecast-card hour-19">
-                    <h4 class="hourly-time">7PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 20 -->
-                <span class="hourly-forecast-card hour-20">
-                    <h4 class="hourly-time">8PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 21 -->
-                <span class="hourly-forecast-card hour-21">
-                    <h4 class="hourly-time">9PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 22 -->
-                <span class="hourly-forecast-card hour-22">
-                    <h4 class="hourly-time">10PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
-                <!-- Hourly Forecast Card for hour 23 -->
-                <span class="hourly-forecast-card hour-23">
-                    <h4 class="hourly-time">11PM</h4>
-                    <img src="" alt="" class=" hourly-forecast-icon">
-                    <h4 class="hourly-temperature">9&deg;</h4>
-                </span>
+            
+            <!-- Hourly Forecast -->
+            <div class="hourly-forecast-info-container">
+                <h2 class="subsection-header">Hourly Forecast:</h2>
+                <div class="hourly-forecast-card-grid">
+                    <!-- Hourly Forecast Card for hour 0 -->
+                    <span class="hourly-forecast-card hour-0">
+                        <h4 class="hourly-time">12AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 1 -->
+                    <span class="hourly-forecast-card hour-1">
+                        <h4 class="hourly-time">1AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 2 -->
+                    <span class="hourly-forecast-card hour-2">
+                        <h4 class="hourly-time">2AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 3 -->
+                    <span class="hourly-forecast-card hour-3">
+                        <h4 class="hourly-time">3AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 4 -->
+                    <span class="hourly-forecast-card hour-4">
+                        <h4 class="hourly-time">4AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 5 -->
+                    <span class="hourly-forecast-card hour-5">
+                        <h4 class="hourly-time">5AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 6 -->
+                    <span class="hourly-forecast-card hour-6">
+                        <h4 class="hourly-time">6AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 7 -->
+                    <span class="hourly-forecast-card hour-7">
+                        <h4 class="hourly-time">7AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 8 -->
+                    <span class="hourly-forecast-card hour-8">
+                        <h4 class="hourly-time">8AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 9 -->
+                    <span class="hourly-forecast-card hour-9">
+                        <h4 class="hourly-time">9AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 10 -->
+                    <span class="hourly-forecast-card hour-10">
+                        <h4 class="hourly-time">10AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 11 -->
+                    <span class="hourly-forecast-card hour-11">
+                        <h4 class="hourly-time">11AM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 12 -->
+                    <span class="hourly-forecast-card hour-12">
+                        <h4 class="hourly-time">12PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 13 -->
+                    <span class="hourly-forecast-card hour-13">
+                        <h4 class="hourly-time">1PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 14 -->
+                    <span class="hourly-forecast-card hour-14">
+                        <h4 class="hourly-time">2PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 15 -->
+                    <span class="hourly-forecast-card hour-15">
+                        <h4 class="hourly-time">3PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 16 -->
+                    <span class="hourly-forecast-card hour-16">
+                        <h4 class="hourly-time">4PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 17 -->
+                    <span class="hourly-forecast-card hour-17">
+                        <h4 class="hourly-time">5PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 18 -->
+                    <span class="hourly-forecast-card hour-18">
+                        <h4 class="hourly-time">6PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 19 -->
+                    <span class="hourly-forecast-card hour-19">
+                        <h4 class="hourly-time">7PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 20 -->
+                    <span class="hourly-forecast-card hour-20">
+                        <h4 class="hourly-time">8PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 21 -->
+                    <span class="hourly-forecast-card hour-21">
+                        <h4 class="hourly-time">9PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 22 -->
+                    <span class="hourly-forecast-card hour-22">
+                        <h4 class="hourly-time">10PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                    <!-- Hourly Forecast Card for hour 23 -->
+                    <span class="hourly-forecast-card hour-23">
+                        <h4 class="hourly-time">11PM</h4>
+                        <img src="" alt="" class=" hourly-forecast-icon">
+                        <h4 class="hourly-temperature">9&deg;</h4>
+                    </span>
+                </div>
             </div>
         </div>
 
