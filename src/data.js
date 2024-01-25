@@ -17,20 +17,10 @@ async function getLocationWeatherData(location) {
       return Promise.reject("Location not recognised!");
     }
 
-    extractWeatherData(response);
+    return response.json();
   } catch (error) {
     return Promise.reject(error);
   }
-}
-
-async function extractWeatherData(response) {
-  const data = await response.json();
-  console.log(data);
-  fillHourlyForecast(data.forecast.forecastday[0]);
-  fillLocationInfo(data.location);
-  fillCurrentWeatherInfo(data.current);
-  fill3DayForecast(data.forecast.forecastday);
-  getGifData(data.location.country, data.current.condition.text);
 }
 
 // async function getGifData(location, condition) {
@@ -50,6 +40,6 @@ async function extractWeatherData(response) {
 // }
 
 const weatherApiKey = "ed56e1bd01c548178dd145408242201";
-const gifApiKey = "TuqD2iuVA7pLwDtPdA9f5kV5rHttZKzx";
+// const gifApiKey = "TuqD2iuVA7pLwDtPdA9f5kV5rHttZKzx";
 
 export { getLocationWeatherData };
