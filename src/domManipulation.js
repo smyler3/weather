@@ -112,11 +112,9 @@ function colourBackground(condition) {
 
 // Mark the current time on the hourly forecast cards
 function markCurrentHour(currentTime) {
-  console.log(currentTime);
   const hourlyTimes = document.querySelectorAll(".hourly-time");
 
   hourlyTimes.forEach((time) => {
-    console.log(time.textContent);
     const hourlyCard = time.parentElement;
     if (parseInt(time.textContent) === parseInt(currentTime)) {
       hourlyCard.classList.add("current-hour-card");
@@ -149,8 +147,20 @@ export default function fillPageData(data, units) {
     // Location details
     { selector: ".city-name", data: data.location.name.toUpperCase() },
     { selector: ".country-name", data: data.location.country },
-    { selector: ".local-time", data: data.location.localtime.split(" ")[0] },
-    { selector: ".local-date", data: data.location.localtime.split(" ")[1] },
+    {
+      selector: ".local-time",
+      data:
+        parseInt(data.location.localtime.split(" ")[1]) < 12
+          ? `${data.location.localtime.split(" ")[1]} AM`
+          : `${parseInt(data.location.localtime.split(" ")[1].split(":")[0]) - 12}:${data.location.localtime.split(" ")[1].split(":")[1]} PM`,
+    },
+    {
+      selector: ".local-date",
+      data: new Date(data.location.localtime.split(" ")[0]).toLocaleDateString(
+        "en-UK",
+        { year: "numeric", month: "short", day: "numeric" },
+      ),
+    },
     {
       selector: ".sunrise-time",
       data: data.forecast.forecastday[0].astro.sunrise,
