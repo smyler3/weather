@@ -1,5 +1,3 @@
-errors not dissappearing correctly, searchbar error background inconsistent
-
 Add cursor on radio div
 
 pre-selected location range

@@ -49,7 +49,7 @@ form {
 .form-field {
     display: grid;
     grid-template-rows: auto repeat(2, 1fr);
-    gap: 8px;
+    gap: 4px;
     width: 100%;
     height: auto;
 }
@@ -65,14 +65,21 @@ form {
 }
 
 .field-error {
-    border-color: red;
-    background-color: rgba(255, 0, 0, 0.041);
-    outline: 1px solid red;
+    border-color: #ff0000;
+    outline: 1px solid #ff0000;
 }
 
 .error-message {
-    color: rgb(252, 62, 62);
-    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+
+    outline: 1px solid rgba(0, 0, 0, 0);
+
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
 button {

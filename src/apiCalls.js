@@ -1,3 +1,5 @@
+import { displaySearchError } from "./errorMessages";
+
 export default async function getWeatherData(location) {
   const weatherApiKey = "ed56e1bd01c548178dd145408242201";
 
@@ -6,6 +8,8 @@ export default async function getWeatherData(location) {
       `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${location}&days=3`,
     );
 
+    console.log(response);
+
     // Invalid location
     if (response.status === 400) {
       return Promise.reject("Location not recognised!");
@@ -13,7 +17,10 @@ export default async function getWeatherData(location) {
 
     return response.json();
   } catch (error) {
-    return Promise.reject(error);
+    const searchBar = document.querySelector("#location");
+    const searchBarError = document.querySelector("#location + .error-message");
+    console.error("Error in weatherapi fetch:", error);
+    displaySearchError(searchBar, searchBarError, error);
   }
 }
 
