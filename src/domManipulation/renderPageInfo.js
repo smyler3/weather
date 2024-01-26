@@ -1,7 +1,7 @@
-import dayTime from "./assets/dayTime.png";
-import nightTime from "./assets/nightTime.png";
-import rain from "./assets/rain.png";
-import snow from "./assets/snow.png";
+import dayTime from "../assets/dayTime.png";
+import nightTime from "../assets/nightTime.png";
+import rain from "../assets/rain.png";
+import snow from "../assets/snow.png";
 
 // Mapping of weather conditions to colours that represent them
 const weatherColorMapping = [

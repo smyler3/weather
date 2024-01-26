@@ -1,4 +1,4 @@
-import { displaySearchError } from "./errorMessages";
+import { displaySearchError } from "./domManipulation/errorMessages";
 
 export default async function getWeatherData(location) {
   const weatherApiKey = "ed56e1bd01c548178dd145408242201";
@@ -12,7 +12,7 @@ export default async function getWeatherData(location) {
 
     // Invalid location
     if (response.status === 400) {
-      return Promise.reject("Location not recognised!");
+      return Promise.reject("Location not found!");
     }
 
     return response.json();

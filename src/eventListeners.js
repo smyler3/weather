@@ -1,6 +1,9 @@
 import getWeatherData from "./apiCalls";
-import fillPageData from "./domManipulation";
-import { displaySearchError, removeSearchError } from "./errorMessages";
+import fillPageData from "./domManipulation/renderPageInfo";
+import {
+  displaySearchError,
+  removeSearchError,
+} from "./domManipulation/errorMessages";
 
 // Try to add data to page based on searchbar result
 export default function addSearchBarEventListener() {
