@@ -1,3 +1,10 @@
+:root {
+    --important-text: #ffffff;
+    --context-text: #F5F7F7; /*#f8f8f8; #fafafa*/
+    --dark-important-text: #000000;
+    --dark-context-text: #333333;
+}
+
 /*
  * ------------------------------------------------------------
  * General Styling
@@ -19,7 +26,7 @@ body {
 
     background-color: grey;
 
-    color: white;
+    color: var(--important-text);
 }
 
 /*
@@ -112,7 +119,7 @@ button {
     font-size: large;
 }
 
-.location-details,
+.location-datetime-details,
 .sun-info,
 .weather-description,
 .precipitation-info {
@@ -183,6 +190,11 @@ button {
     font-size: 50px;
 }
 
+.location-datetime-details,
+.sun-info {
+    color: var(--context-text);
+}
+
 /*
  * ------------------------------------------------------------
  * Current Weather Information Styling
@@ -202,6 +214,11 @@ button {
 
 .current-weather-description {
     font-size: 50px;
+}
+
+.low-high-temp,
+.precipitation-info {
+    color: var(--context-text);
 }
 
 /*
@@ -242,6 +259,7 @@ button {
 .forecast-card-title {
     text-align: center;
     font-size: small;
+    color: var(--context-text);
 }
 
 .forecast-card-details {
@@ -249,6 +267,11 @@ button {
     grid-template-rows: auto 1fr;
     justify-items: center;
     gap: 0.5rem;
+}
+
+.weather-rain-chance,
+.weather-snow-chance {
+    color: var(--context-text);
 }
 
 /*
@@ -284,6 +307,7 @@ button {
 
 .detail-card > h4 {
     font-size: small;
+    color: var(--context-text);
 }
 
 /*
@@ -314,12 +338,16 @@ button {
     background-color: rgba(255, 255, 255, 0.20);
 }
 /* Marks current hour */
-.current-hour {
+.current-hour-card {
     background-color: rgba(255, 255, 255, 0.80);
 
-    color: black
+    color: var(--dark-important-text);
+}
+.current-hour-card > .hourly-time {
+    color: var(--dark-contrast-text);
 }
 
 .hourly-time {
     font-size: small;
+    color: var(--context-text);
 }

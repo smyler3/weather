@@ -119,9 +119,9 @@ function markCurrentHour(currentTime) {
     console.log(time.textContent);
     const hourlyCard = time.parentElement;
     if (parseInt(time.textContent) === parseInt(currentTime)) {
-      hourlyCard.classList.add("current-hour");
+      hourlyCard.classList.add("current-hour-card");
     } else {
-      hourlyCard.classList.remove("current-hour");
+      hourlyCard.classList.remove("current-hour-card");
     }
   });
 }
@@ -212,8 +212,8 @@ export default function fillPageData(data, units) {
     // Current forecast details
     {
       selector: ".current-temp",
-      metric: data.current.temp_c,
-      imperial: data.current.temp_f,
+      metric: `${data.current.temp_c}\u{B0}`,
+      imperial: `${data.current.temp_f}\u{B0}`,
     },
     {
       selector: ".detail-feels-like",
@@ -515,39 +515,6 @@ export default function fillPageData(data, units) {
   addIcons();
   colourBackground(data.current.condition.text);
 }
-
-// const backgroundColours = [
-//   { codes: [1000], values: ["Sunny", "Clear"], colour: "" },
-//   {
-//     codes: [1003, 1006, 1009],
-//     values: ["Partly Cloudy", "Cloudy", "Overcast"],
-//     colour: "",
-//   },
-//   { codes: [1030], values: ["Mist"], colour: "" },
-//   {
-//     codes: [1063, 1066, 1069, 1072],
-//     values: [
-//       "Patchy rain possible",
-//       "Patchy snow possible",
-//       "Patchy sleet possible",
-//       "Patchy freezing drizzle possible",
-//     ],
-//     colour: "",
-//   },
-//   { codes: [1087], values: ["Thundery outbreaks possible"], colour: "" },
-//   { codes: [1114, 1117], values: ["Blowing snow", "Blizzard"], colour: "" },
-//   { codes: [1135], values: ["Fog"], colour: "" },
-//   {
-//     codes: [1147, 1150, 1153],
-//     values: ["Freezing fog", "Patchy light drizzle", "Light drizzle"],
-//     colour: "",
-//   },
-//   {
-//     codes: [1168, 1171],
-//     values: ["Freezing drizzle", "Heavy freezing drizzle"],
-//     colour: "",
-//   },
-// ];
 
 // function addGif(url) {
 //   const gif = document.querySelector(".gif-container > img");
