@@ -3,6 +3,8 @@
     --context-text: #F5F7F7; /*#f8f8f8; #fafafa*/
     --dark-important-text: #000000;
     --dark-context-text: #333333;
+
+    --loading-square: 20px;
 }
 
 /*
@@ -362,4 +364,89 @@ button {
 .hourly-time {
     font-size: small;
     color: var(--context-text);
+}
+
+/*
+ * ------------------------------------------------------------
+ * Load Bar Styling
+ * ------------------------------------------------------------
+ */
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 2;
+    overflow: auto;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+} 
+
+.loading-container {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+
+    width: calc(var(--loading-square) * 20);
+
+    padding: var(--loading-square);
+
+    background-color: #a0a0a0;
+} 
+
+.loading-text-container {
+    width: 100%;
+}
+
+.loading-bar {
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: calc(var(--loading-square) * 11);
+    height: var(--loading-square);
+
+    background-color: white;
+    outline: 1px solid black;
+} 
+
+.load-square {
+    width: var(--loading-square);
+    height: var(--loading-square);
+
+    background-color: white;
+}
+.load-square-active-1 {
+    background-color: rgba(0, 102, 255, 1);
+}
+.load-square-active-2 {
+    background-color: rgba(0, 102, 255, 0.9);
+}
+.load-square-active-3 {
+    background-color: rgba(0, 102, 255, 0.8);
+}
+.load-square-active-4 {
+    background-color: rgba(0, 102, 255, 0.7);
+}
+.load-square-active-5 {
+    background-color: rgba(0, 102, 255, 0.6);
+}
+.load-square-active-6 {
+    background-color: rgba(0, 102, 255, 0.5);
+}
+.load-square-active-7 {
+    background-color: rgba(0, 102, 255, 0.4);
+}
+.load-square-active-8 {
+    background-color: rgba(0, 102, 255, 0.3);
+}
+.load-square-active-9 {
+    background-color: rgba(0, 102, 255, 0.2);
+}
+.load-square-active-10 {
+    background-color: rgba(0, 102, 255, 0.1);
 }
