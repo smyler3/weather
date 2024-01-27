@@ -19,8 +19,6 @@ function moveLoadingBar() {
   const lastSquare = LoadingBar.firstElementChild;
 
   LoadingBar.appendChild(lastSquare);
-  console.log(LoadingBar);
-  console.log("loading");
 }
 
 let modal = null;

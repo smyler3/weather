@@ -1,22 +1,48 @@
-import { displaySearchError } from "./domManipulation/errorMessages";
 import {
   hideLoadingBar,
   moveLoadingBar,
   renderLoadingBar,
 } from "./domManipulation/loadingBar";
 
-// Try to recieve data from the weatherapi server
-export default async function getWeatherData(location) {
+// Query to the weatherapi server
+async function queryWeatherApi(location) {
   const weatherApiKey = "ed56e1bd01c548178dd145408242201";
 
+  // Delay for testing
+  await new Promise((resolve) => setTimeout(resolve, 20000));
+
+  const response = await fetch(
+    `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${location}&days=3`,
+  );
+
+  return response;
+}
+
+// Timer to prevent hanging await operations
+async function timeoutPromise() {
+  const TIMEOUT_DURATION = 1000;
+
+  const timeout = await new Promise((_, reject) => {
+    setTimeout(() => {
+      reject("Server response timed out!");
+    }, TIMEOUT_DURATION);
+  });
+
+  return timeout;
+}
+
+// Try to recieve data from the weatherapi server
+export default async function getWeatherData(location) {
   // Start loading bar animation
   renderLoadingBar();
   const loadingBarInterval = setInterval(moveLoadingBar, 100);
 
   try {
-    const response = await fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${location}&days=3`,
-    );
+    const response = await Promise.race([
+      queryWeatherApi(location),
+      timeoutPromise(),
+    ]);
+
     console.log(response);
 
     // Invalid location
@@ -24,16 +50,10 @@ export default async function getWeatherData(location) {
       return Promise.reject("Location not found!");
     }
 
-    // Slow down data collection to show off loading bar XD
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
     return response.json();
   } catch (error) {
-    const searchBar = document.querySelector("#location");
-    const searchBarError = document.querySelector("#location + .error-message");
-
     console.error("Error in weatherapi fetch:", error);
-    displaySearchError(searchBar, searchBarError, error);
+    return Promise.reject(error);
   } finally {
     // Remove loading bar animation
     hideLoadingBar();

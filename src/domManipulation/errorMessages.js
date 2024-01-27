@@ -1,5 +1,10 @@
+function initialiseSearchErrors() {
+  searchBar = document.querySelector("#location");
+  searchBarError = document.querySelector("#location + .error-message");
+}
+
 // Indicate an error in the search
-function displaySearchError(searchBar, searchBarError, error) {
+function displaySearchError(error) {
   searchBarError.textContent = error;
   searchBarError.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
   searchBarError.style.outlineColor = "rgba(0, 0, 0, 0.2)";
@@ -8,7 +13,7 @@ function displaySearchError(searchBar, searchBarError, error) {
 }
 
 // Indicate no error in the search
-function removeSearchError(searchBar, searchBarError) {
+function removeSearchError() {
   searchBarError.textContent = "";
   searchBarError.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
   searchBarError.style.outlineColor = "rgba(0, 0, 0, 0.0)";
@@ -16,4 +21,7 @@ function removeSearchError(searchBar, searchBarError) {
   searchBar.classList.remove("field-error");
 }
 
-export { displaySearchError, removeSearchError };
+let searchBar = null;
+let searchBarError = null;
+
+export { initialiseSearchErrors, displaySearchError, removeSearchError };
