@@ -391,7 +391,7 @@ button {
     display: grid;
     grid-template-rows: repeat(2, auto);
 
-    width: calc(var(--loading-square) * 20);
+    width: calc(var(--loading-square) * 13);
 
     padding: var(--loading-square);
 

@@ -5,7 +5,7 @@ import {
   removeSearchError,
 } from "./domManipulation/errorMessages";
 
-// Try to add data to page based on searchbar result
+// Query weatherapi based on searchbar input location
 export default function addSearchBarEventListener() {
   const submitBtn = document.querySelector("button");
   const searchBar = document.querySelector("#location");
