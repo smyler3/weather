@@ -8,9 +8,6 @@ import {
 async function queryWeatherApi(location) {
   const weatherApiKey = "ed56e1bd01c548178dd145408242201";
 
-  // Delay for testing
-  await new Promise((resolve) => setTimeout(resolve, 20000));
-
   const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${location}&days=3`,
   );
