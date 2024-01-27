@@ -11,12 +11,11 @@ intialiseLoadingBar();
 initialiseSearchErrors();
 addSearchBarEventListener();
 
-// // Initial data call
-// getWeatherData("Odenville")
-//   .then((data) => {
-//     console.log(data);
-//     fillPageData(data, "metric");
-//   })
-//   .catch((error) => {
-//     console.error("Error in inital page load:", error);
-//   });
+// Initial data call
+getWeatherData("Odenville")
+  .then((data) => {
+    fillPageData(data, "metric");
+  })
+  .catch((error) => {
+    console.error("Error in inital page load:", error);
+  });

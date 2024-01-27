@@ -20,7 +20,7 @@ async function queryWeatherApi(location) {
 
 // Timer to prevent hanging await operations
 async function timeoutPromise() {
-  const TIMEOUT_DURATION = 1000;
+  const TIMEOUT_DURATION = 10000;
 
   const timeout = await new Promise((_, reject) => {
     setTimeout(() => {
@@ -42,8 +42,6 @@ export default async function getWeatherData(location) {
       queryWeatherApi(location),
       timeoutPromise(),
     ]);
-
-    console.log(response);
 
     // Invalid location
     if (response.status === 400) {

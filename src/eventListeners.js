@@ -18,9 +18,9 @@ export default function addSearchBarEventListener() {
       displaySearchError(error);
     } else {
       const units = document.querySelector('input[name="units"]:checked').value;
+
       getWeatherData(searchBar.value)
         .then((data) => {
-          console.log(data);
           removeSearchError();
           fillPageData(data, units);
         })

@@ -1,9 +1,16 @@
 :root {
+    /* Colours */
     --important-text: #ffffff;
-    --context-text: #F5F7F7; /*#f8f8f8; #fafafa*/
+    --context-text: #F5F7F7;
     --dark-important-text: #000000;
     --dark-context-text: #333333;
+    --error-red: #ff0000;
+    --loading-container-background: #494949;
+    --info-card-background: rgba(255, 255, 255, 0.20);
+    --highlight-info-card-background: rgba(255, 255, 255, 0.80);
+    --dark-shadow: rgba(0, 0, 0, 0.8);
 
+    /* Loading bar square size */
     --loading-square: 20px;
 }
 
@@ -29,69 +36,6 @@ body {
     background-color: grey;
 
     color: var(--important-text);
-}
-
-/*
- * ------------------------------------------------------------
- * Search Form Styling
- * ------------------------------------------------------------
- */
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 1rem 2rem;
-
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.20);
-}
-
-.form-field {
-    display: grid;
-    grid-template-rows: auto repeat(2, 1fr);
-    gap: 4px;
-    width: 100%;
-    height: auto;
-}
-
-.searchbar {
-    border: 1px solid black;
-    padding: 8px;
-}
-
-.unit-option {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-}
-
-.unit-option > * {
-    cursor: pointer;
-}
-
-.field-error {
-    border-color: #ff0000;
-    outline: 1px solid #ff0000;
-}
-
-.error-message {
-    display: flex;
-    align-items: center;
-
-    padding-left: 10px;
-
-    outline: 1px solid rgba(0, 0, 0, 0);
-
-    color: white;
-    font-weight: bolder;
-    font-size: 1rem;
-}
-
-button {
-    padding: 10px 20px;
-    cursor: pointer;
 }
 
 /*
@@ -123,10 +67,6 @@ button {
     display: grid;
     grid-template-columns: 1fr 3fr;
     column-gap: 1rem;
-}
-
-.row-3 {
-
 }
 
 .subsection-header {
@@ -187,7 +127,7 @@ button {
 .location-info-container {
     padding: 0.5rem 1rem;
 
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: var(--info-card-background);
     border-radius: 10px;
 }
 
@@ -211,14 +151,14 @@ button {
 
 /*
  * ------------------------------------------------------------
- * Current Weather Information Styling
+ * Current Weather Forecast Styling
  * ------------------------------------------------------------
  */
 
 .current-weather-container {
     padding: 0.5rem 1rem;
 
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: var(--info-card-background);
     border-radius: 10px;
 } 
 
@@ -234,12 +174,6 @@ button {
 .precipitation-info {
     color: var(--context-text);
 }
-
-/*
- * ------------------------------------------------------------
- * Gif Styling
- * ------------------------------------------------------------
- */
 
 /*
  * ------------------------------------------------------------
@@ -267,7 +201,7 @@ button {
     padding: 0.2rem 1rem;
 
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: var(--info-card-background);
 }
 
 .forecast-card-title {
@@ -290,7 +224,7 @@ button {
 
 /*
  * ------------------------------------------------------------
- * Current Details Styling
+ * Current Forecast Details Styling
  * ------------------------------------------------------------
  */
 
@@ -316,7 +250,7 @@ button {
     height: 100%;
 
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: var(--info-card-background);
 }
 
 .detail-card > h4 {
@@ -349,11 +283,11 @@ button {
     align-items: center;
 
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: var(--info-card-background);
 }
 /* Marks current hour */
 .current-hour-card {
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: var(--highlight-info-card-background);
 
     color: var(--dark-important-text);
 }
@@ -364,6 +298,69 @@ button {
 .hourly-time {
     font-size: small;
     color: var(--context-text);
+}
+
+/*
+ * ------------------------------------------------------------
+ * Search Form Styling
+ * ------------------------------------------------------------
+ */
+
+ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    border-radius: 10px;
+    background-color: var(--info-card-background);
+}
+
+.form-field {
+    display: grid;
+    grid-template-rows: auto repeat(2, 1fr);
+    gap: 4px;
+    width: 100%;
+    height: auto;
+}
+
+.searchbar {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.unit-option {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.unit-option > * {
+    cursor: pointer;
+}
+
+.field-error {
+    border-color: var(--error-red);
+    outline: 1px solid var(--error-red);
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+
+    outline: 1px solid rgba(0, 0, 0, 0);
+
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 /*
@@ -384,18 +381,16 @@ button {
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--dark-shadow);
 } 
 
 .loading-container {
     display: grid;
     grid-template-rows: repeat(2, auto);
 
-    width: calc(var(--loading-square) * 13);
+    padding: calc(var(--loading-square) * 1) calc(var(--loading-square) * 4);
 
-    padding: var(--loading-square);
-
-    background-color: #a0a0a0;
+    background-color: var(--loading-container-background);
 } 
 
 .loading-text-container {
@@ -420,6 +415,7 @@ button {
 
     background-color: white;
 }
+/* Styles the loading bar to appear to fade over time */
 .load-square-1 {
     background-color: rgba(0, 102, 255, 1);
 }
